@@ -71,6 +71,11 @@ do that and record the skip.
 5. If `project.is_home_or_toolbox` is true there is no project to hold the folder: ask which
    project this serves, inside the Step 2 question message (it counts toward the four).
 
+6. **Tools freshness.** If `tools_scan.stale` is true (last scan older than a week, or none), add the
+   tools-scan question to the Step 2 message — run an update scan now, after the analysis, or not this
+   time — and follow [references/tools-scan.md](references/tools-scan.md). **Only with the user's yes:**
+   research only, no downloads or switches; the user chooses what to measure.
+
 ## Step 2 — Opening questions (protocol 0a)
 
 The questions do two jobs: aim the analysis, and make you think about what else this video can

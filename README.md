@@ -12,6 +12,7 @@ skills/recon/
   references/
     artifact-route.md         when the product itself is available: from "what it does" to "how"
     witness-runner.md         contract for a guarded runner of ASR / OCR / VLM witnesses
+    tools-scan.md             keeping models and tools current: scan with the user's approval, research only
   scripts/
     preflight.py              read-only check of protocol, project, tools and local config
     scaffold_target.py        creates the per-target research folder (never overwrites)
@@ -37,6 +38,7 @@ scripts/
 - `ffmpeg` and `ffprobe`.
 - Python 3 with `numpy`, `opencv-python` and `Pillow` for the motion and screenshot scripts.
 - Playwright (with a Chromium build) for `site_capture.py`.
+- Tools freshness: preflight reports the age of the last tools scan; when it is older than a week the skill offers an update scan (research only, never a download or switch) and runs it only with the user's yes.
 - Optional: local ASR, OCR and VLM models, run through your own guarded runner (see `skills/recon/references/witness-runner.md`). The skill never installs anything and never downloads model weights; a channel whose tool is missing is reported as `partial_scope`.
 
 ## Installation

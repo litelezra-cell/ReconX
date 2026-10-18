@@ -29,5 +29,10 @@
   },
   "public_denylist": [
     "strings that must never appear in a public mirror: your username, private project names"
-  ]
+  ],
+  "tools_scan": {
+    "dir": "~/.claude/toolbox/models/scans",
+    "max_age_days": 7,
+    "_note": "where update scans are written; the skill offers a scan (with the user's yes) when the newest is older than max_age_days"
+  }
 }

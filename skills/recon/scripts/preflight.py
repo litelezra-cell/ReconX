@@ -14,6 +14,7 @@ import argparse
 import glob
 import hashlib
 import json
+import datetime
 import os
 import re
 import shutil
@@ -161,6 +162,25 @@ def main() -> int:
         "preflight_cli": shutil.which("memguard-preflight"),
         "readme": str(MEMGUARD / "README.md") if (MEMGUARD / "README.md").is_file() else None,
     }
+
+    # 6. Tool freshness — models and tools change weekly; the skill offers an update scan (with the user's
+    # approval) when the last scan is older than `tools_scan.max_age_days` (default 7).
+    cfg = recon_config.load() if hasattr(recon_config, "load") else {}
+    ts = (cfg.get("tools_scan") or {}) if isinstance(cfg, dict) else {}
+    scan_dir = Path(os.path.expanduser(ts.get("dir", "~/.claude/toolbox/models/scans")))
+    max_age = int(ts.get("max_age_days", 7))
+    scans = sorted(scan_dir.glob("????-??-??*.md")) if scan_dir.is_dir() else []
+    last = scans[-1].name[:10] if scans else None
+    age = None
+    if last:
+        try:
+            age = (datetime.date.today() - datetime.date.fromisoformat(last)).days
+        except ValueError:
+            age = None
+    report["tools_scan"] = {"dir": str(scan_dir), "last": last, "age_days": age, "max_age_days": max_age,
+                            "stale": age is None or age > max_age,
+                            "procedure": str(Path(__file__).resolve().parents[1] / "references" / "tools-scan.md")}
+
 
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return 0
