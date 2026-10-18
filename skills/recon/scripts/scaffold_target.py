@@ -102,7 +102,7 @@ def build(args: argparse.Namespace) -> dict:
         "protocol_sha256": psha,
         "run_record": f"runs/{date}/RUN-RECORD.json",
         "report": "deliverables/REPORT.md",
-        "research_model_requested": "haiku",
+        "research_model_requested": (recon_config.get("research_model") or {}).get("value") if isinstance(recon_config.get("research_model"), dict) else recon_config.get("research_model"),
         "research_model_effective": None,
         "created_by": "recon skill",
     }
@@ -181,7 +181,7 @@ Findings: `runs/<date>/preliminary-findings.md` (to fill in)
 
 ## 3. Decisions already made
 - Protocol: `{PROTOCOL}` version `{version}`.
-- Research agents: `model: "haiku"`. Every "tool X does Y" claim from a Haiku report is checked against the primary source before it enters a document.
+- Research agents: the research model from the local config (`research_model`; default one tier below the main model). Every "tool X does Y" claim from a research report is checked against the primary source before it enters a document.
 - No installs on the skill's own initiative; model loads only through memguard.
 
 ## 4. Actual state

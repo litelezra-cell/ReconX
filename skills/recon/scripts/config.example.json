@@ -34,5 +34,9 @@
     "dir": "~/.claude/toolbox/models/scans",
     "max_age_days": 7,
     "_note": "where update scans are written; the skill offers a scan (with the user's yes) when the newest is older than max_age_days"
+  },
+  "research_model": {
+    "value": null,
+    "_note": "model for research subagents; your choice. null = one tier below the main model (cheap, not the smallest). Set your largest model here if you prefer depth over cost."
   }
 }

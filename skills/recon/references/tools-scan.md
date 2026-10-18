@@ -20,7 +20,7 @@ current tools. A scheduled weekly scan, if the user set one up, writes to the sa
 - **Research only.** No download, install, pull, model load or switch. Model and quantisation choices
   belong to the user: bring candidates with explanations; the user picks what to measure. Before any
   later download: the machine's duplicate check; every model load goes through the memory gate.
-- Research subagents on the cheap research model the user set (e.g. a small, inexpensive model); record requested and
+- Research subagents on the research model the user chose (`research_model`; default: one tier below the main model — cheap, but not the smallest); record requested and
   effective model.
 - Every claim (what it does, benchmark, licence, release date, Apple-Silicon/MLX/GGUF availability) is
   verified at the primary source (model card, repo, LICENSE file, release notes) before it enters the

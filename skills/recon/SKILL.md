@@ -222,17 +222,20 @@ Cheap and fast; its job is to learn what to look for. It is orientation, not cov
   the media list; if the page asks for a CAPTCHA or a login, stop and ask the user. Never bypass
   bot detection. Download the product's own images into `evidence/site/<slug>/assets/` (git-ignored).
   Every embedded video found here is a new source: list it for the follow-up questions.
-- **Research on the topic, in parallel:** spawn research subagents with `model: "haiku"` — one
+- **Research on the topic, in parallel:** spawn research subagents on the **research model** — one
   for the official site (docs, changelog, price, host app, version), one for communities and
-  forums on the topic. Research agents use the small, cheap model; this overrides any
-  named-model routing for research in other rules. Each brief carries the target folder, the
+  forums on the topic. The research model is the user's choice (`research_model` in the local
+  config). If it is not set, use a model one tier below the main model: cheap enough to run several
+  agents in parallel, but not the smallest tier — the smallest misses and invents too much for
+  evidence work. Some users prefer their largest model for research; that is their call, and the
+  config wins over this default. Each brief carries the target folder, the
   **captured page files** (`evidence/site/<slug>/data/text*.md`, `media*.json`) to read first,
   what is already known, a distinct scope per agent, and the instruction to keep official, marketing
   and community sources apart with URLs, and to return three lists: sources, conclusions (each with
   its URL and quoted phrase), and unresolved gaps. Record the requested model and only the effective model the tool result
   reports.
-- **Verify before it enters a document:** every "tool X does Y" claim from a Haiku report is
-  checked against the primary source (the page, the docs, the code). In an earlier analysis a Haiku report
+- **Verify before it enters a document:** every "tool X does Y" claim from a research-agent report is
+  checked against the primary source (the page, the docs, the code). In an earlier analysis a research report
   said a repo writes Resolve's retime curve; the code called functions that do not exist.
 - Write `runs/<date>/preliminary-findings.md`: what this is, what is already known, what is
   surprising, and what to look for in the video and where (time ranges).
