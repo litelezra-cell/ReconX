@@ -67,3 +67,10 @@ quintuples, action clips and WAV extraction. Record actual PTS and hashes; keep 
   `-fps_mode passthrough` gives real timestamps for each kept frame (parse `pts_time`).
 - **A UI-prompt VLM still helps on a UI demo,** but it misread tool actions as user actions twice;
   log every rejected interpretation in the RUN-RECORD.
+
+## Bundled reference runner
+
+`runner/` (next to this file's folder) is a standalone, config-driven implementation of this contract:
+`witness_guard.py` (preflight, memguard lease, watchdog, guard report) and `witness_worker.py` (offline,
+config-listed models, the four stages). Copy `runner/runner.example.json` to `runner.json`, fill in your
+interpreters and model paths, and point the `witness_runner` config key at it. See `runner/README.md`.

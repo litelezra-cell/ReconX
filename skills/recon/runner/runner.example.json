@@ -1,0 +1,52 @@
+{
+  "_comment": "Copy to runner.json and fill in your own paths. Models are read ONLY from here.",
+  "memguard_path": null,
+  "stages": {
+    "ocr": {
+      "enabled": true,
+      "python": "/path/to/ocr-venv/bin/python",
+      "budget_bytes": 1073741824,
+      "models": {
+        "Det.model_path": "/path/to/rapidocr/models/det.onnx",
+        "Rec.model_path": "/path/to/rapidocr/models/rec.onnx",
+        "Cls.model_path": "/path/to/rapidocr/models/cls.onnx"
+      },
+      "params": {"rapidocr": {}}
+    },
+    "asr_w1": {
+      "enabled": true,
+      "python": "/path/to/mlx-audio-venv/bin/python",
+      "budget_bytes": 12884901888,
+      "models": {
+        "asr_model_path": "/path/to/Qwen3-ASR-1.7B",
+        "aligner_model_path": "/path/to/Qwen3-ForcedAligner-0.6B"
+      },
+      "params": {"chunk_seconds": 280, "max_tokens": 4096, "language": "English"}
+    },
+    "asr_w2": {
+      "enabled": true,
+      "python": "/path/to/any-python3/bin/python",
+      "budget_bytes": 4294967296,
+      "models": {
+        "binary": "/path/to/whisper.cpp/build/bin/whisper-cli",
+        "model_path": "/path/to/ggml-large-v3.bin"
+      },
+      "params": {"language": "en", "extra_flags": []}
+    },
+    "vlm": {
+      "enabled": true,
+      "python": "/path/to/mlx-vlm-venv/bin/python",
+      "budget_bytes": 48318382080,
+      "models": {"model_path": "/path/to/vision-language-model"},
+      "params": {
+        "max_tokens": 4096,
+        "temperature": 0,
+        "repetition_penalty": 1.2,
+        "enable_thinking": false,
+        "fps": 2,
+        "frames_per_batch": 16,
+        "prompt": "Read all visible UI text first. Compare these chronological source frames; state observed control, action and visible result separately. Do not infer latency, implementation, host APIs or invisible actions. Report uncertainty. Source timestamps: {timestamps}"
+      }
+    }
+  }
+}

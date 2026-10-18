@@ -23,6 +23,8 @@ skills/recon/
     site_capture.py           captures official pages (HTML, text, screenshots, media list)
     recon_config.py           loads the machine-local config
     config.example.json       template for the local config
+skills/recon/runner/            witness runner: memory-gated, network-denied model processes (OCR, ASR W1/W2, VLM)
+toolbox/memguard/               machine-wide memory gate for model loads (ctypes probe, lease broker, preflight)
 toolbox/video-analysis/
   README.md                   the protocol
   CHANGELOG.md                protocol history
@@ -31,6 +33,10 @@ toolbox/video-analysis/
 scripts/
   check-public.sh             release gate: fails if a tracked file contains a deny-listed string
 ```
+
+## Setup
+
+Start with **[SETUP.md](SETUP.md)**: which tool or model serves each channel, how to install it, a tier table for different machines, and the measurements behind every choice.
 
 ## Requirements
 
