@@ -1,0 +1,33 @@
+{
+  "_comment": "Copy to ~/.claude/recon-local/config.json (or point $RECON_CONFIG at it) and fill in your machine's paths. Every key is optional; a missing key is reported by preflight.py as not configured and the channel it serves becomes partial_scope. ~ and $VARS are expanded.",
+  "requested_by": "your name (written into CONTEXT.md / HANDOFF.md)",
+  "ffmpeg": "~/bin/ffmpeg",
+  "ffprobe": "~/bin/ffprobe",
+  "python_motion": "/path/to/venv-with-numpy-and-opencv/bin/python",
+  "python_site_capture": "/path/to/venv-with-playwright-and-chromium/bin/python",
+  "scraping_protocol": "/path/to/your/scraping/protocol.md",
+  "witness_runner": {
+    "project": "/path/to/the/project/that/holds/the/guarded/witness/runner",
+    "python": "/path/to/venv/bin/python",
+    "guard_script": "scripts/local_model_guard.py",
+    "adapter": "/path/to/that/project/.project_docs/protocols/video-analysis.md"
+  },
+  "yt_dlp_venv_globs": [
+    "~/.venvs/*"
+  ],
+  "whisper_cli_globs": [
+    "/path/to/whisper.cpp/build/bin/whisper-cli"
+  ],
+  "reverse_engineering_dir": "/path/to/read-only/reference/artifacts",
+  "third_party_dir": "/path/to/read-only/third-party/clones",
+  "examples": {
+    "finished_target": "/path/to/a/finished/target/folder",
+    "control_maps": [
+      "/path/to/a/good/control-map.md"
+    ],
+    "witness_manifests": "/path/to/a/finished/target/runs/<date>/*-manifest.json"
+  },
+  "public_denylist": [
+    "strings that must never appear in a public mirror: your username, private project names"
+  ]
+}

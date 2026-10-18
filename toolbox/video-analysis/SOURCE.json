@@ -1,0 +1,39 @@
+{
+  "version": "2026-10-14.1",
+  "upstream_path": "origin protocol of a host video pipeline (machine path in ~/.claude/recon-local/protocol-provenance.json, not published)",
+  "upstream_sha256": "2dad6f81c4dd3dd9465c22de4e3af3b3718c1f5bae83a52c25cd0282f30f5d52",
+  "reviewed_at": "2026-10-08",
+  "lessons_path": "local (see protocol-provenance.json)",
+  "scope": "Portable requirements; supplemental witness-verification lessons (2026-10-10); no upstream engine/schema or historical-run rewrite",
+  "supplemental_reviewed_at": "2026-10-10",
+  "supplemental_lessons_paths": [
+    "local (see protocol-provenance.json)"
+  ],
+  "upstream_current_sha256": "2dad6f81c4dd3dd9465c22de4e3af3b3718c1f5bae83a52c25cd0282f30f5d52",
+  "upstream_unchanged_since_recorded_review": true,
+  "supplemental_2026_10_12_1": {
+    "reviewed_at": "2026-10-12",
+    "approved_by": "maintainer decision",
+    "sources": [
+      "local (see protocol-provenance.json): a plugin project's UI inventory and its control-inventory proposal"
+    ],
+    "scope": "intake (stage 0) + mandatory control inventory for UI track; no upstream change"
+  },
+  "supplemental_2026_10_13_1": {
+    "reviewed_at": "2026-10-13",
+    "approved_by": "maintainer decision (based on the user answers in the trial run)",
+    "scope": "stage 0 split into opening questions, preliminary analysis + external research, findings + follow-up questions, then deep analysis; no upstream change",
+    "runner": "~/.claude/skills/recon/SKILL.md"
+  },
+  "supplemental_2026_10_13_2": {
+    "reviewed_at": "2026-10-13",
+    "approved_by": "maintainer decision (rule added after the step was skipped repeatedly)",
+    "scope": "iron rule: motion/creation measured on every source frame; motion_source_rate channel + mechanical gate"
+  },
+  "local_provenance": "~/.claude/recon-local/protocol-provenance.json (machine paths; not published)",
+  "supplemental_2026_10_14_1": {
+    "reviewed_at": "2026-10-14",
+    "approved_by": "maintainer decision (lessons from the TypeFlow analysis)",
+    "scope": "windows outside panel; named screenshots + index from transcript walk; VLM window calibration; OCR RTL blindness; gate enforces"
+  }
+}

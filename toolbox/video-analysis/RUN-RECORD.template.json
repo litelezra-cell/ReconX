@@ -1,0 +1,308 @@
+{
+  "protocol_version": "2026-10-14.1",
+  "record_kind": "portable_analysis_record_not_host_ingest",
+  "source": {
+    "url": null,
+    "id": null,
+    "canonical_url": null,
+    "observed_at": null,
+    "path": null,
+    "sha256": null,
+    "duration_s": null,
+    "width": null,
+    "height": null,
+    "timebase": null
+  },
+  "scope": {
+    "question": null,
+    "mode": null,
+    "start_s": null,
+    "end_s": null,
+    "done_evidence": null
+  },
+  "intake": {
+    "asked": null,
+    "skipped_reason": null,
+    "content_type": null,
+    "must_not_miss": [],
+    "intended_use": null,
+    "watch_for_open_text": null,
+    "answers_verbatim": [],
+    "stages_requested": null,
+    "round2_asked": null,
+    "round2_questions": [],
+    "round2_answers_verbatim": [],
+    "required_tracks_derived": []
+  },
+  "preliminary": {
+    "status": "planned|done|skipped",
+    "skipped_reason": null,
+    "source_metadata_paths": [],
+    "source_captions_paths": [],
+    "single_asr": {
+      "tool_or_model": null,
+      "paths": [],
+      "exit_codes": []
+    },
+    "navigation_sheet_paths": [],
+    "external_research": [],
+    "external_research_item_format": {
+      "url": null,
+      "kind": "official|marketing|community",
+      "claim": null,
+      "verified_against_primary": null,
+      "agent_model_requested": null,
+      "agent_model_effective": null
+    },
+    "findings": [],
+    "what_to_look_for_in_deep": [],
+    "note": "Preliminary stage is orientation, not coverage: no complete_scope from it."
+  },
+  "requirements": {
+    "visual_sequence": {
+      "required": null,
+      "reason": null
+    },
+    "human_review": {
+      "required": null,
+      "reason": null
+    },
+    "asr_w1": {
+      "required": null,
+      "reason": null
+    },
+    "asr_w2": {
+      "required": null,
+      "reason": null
+    },
+    "source_captions": {
+      "required": null,
+      "reason": null
+    },
+    "ocr": {
+      "required": null,
+      "reason": null
+    },
+    "vlm": {
+      "required": null,
+      "reason": null
+    },
+    "quintuples": {
+      "required": null,
+      "reason": null
+    },
+    "temporal_actions": {
+      "required": null,
+      "reason": null
+    },
+    "discrepancy_review": {
+      "required": null,
+      "reason": null
+    },
+    "safety": {
+      "required": null,
+      "reason": null
+    },
+    "artifact_audit": {
+      "required": null,
+      "reason": null
+    },
+    "motion_source_rate": {
+      "required": null,
+      "reason": null
+    }
+  },
+  "channels": {
+    "acquisition": {
+      "status": "planned",
+      "tool_or_model": null,
+      "ranges_s": [],
+      "actual_timestamps_s": [],
+      "evidence_paths": [],
+      "exit_codes": [],
+      "truncated": null,
+      "reason": null
+    },
+    "visual_sequence": {
+      "status": "planned",
+      "tool_or_model": null,
+      "ranges_s": [],
+      "actual_timestamps_s": [],
+      "evidence_paths": [],
+      "exit_codes": [],
+      "truncated": null,
+      "reason": null
+    },
+    "human_review": {
+      "status": "planned",
+      "tool_or_model": null,
+      "ranges_s": [],
+      "actual_timestamps_s": [],
+      "evidence_paths": [],
+      "exit_codes": [],
+      "truncated": null,
+      "reason": null
+    },
+    "asr_w1": {
+      "status": "planned",
+      "tool_or_model": null,
+      "ranges_s": [],
+      "actual_timestamps_s": [],
+      "evidence_paths": [],
+      "exit_codes": [],
+      "truncated": null,
+      "reason": null
+    },
+    "asr_w2": {
+      "status": "planned",
+      "tool_or_model": null,
+      "ranges_s": [],
+      "actual_timestamps_s": [],
+      "evidence_paths": [],
+      "exit_codes": [],
+      "truncated": null,
+      "reason": null
+    },
+    "source_captions": {
+      "status": "planned",
+      "tool_or_model": null,
+      "ranges_s": [],
+      "actual_timestamps_s": [],
+      "evidence_paths": [],
+      "exit_codes": [],
+      "truncated": null,
+      "reason": null
+    },
+    "ocr": {
+      "status": "planned",
+      "tool_or_model": null,
+      "ranges_s": [],
+      "actual_timestamps_s": [],
+      "evidence_paths": [],
+      "exit_codes": [],
+      "truncated": null,
+      "reason": null
+    },
+    "vlm": {
+      "status": "planned",
+      "tool_or_model": null,
+      "ranges_s": [],
+      "actual_timestamps_s": [],
+      "evidence_paths": [],
+      "exit_codes": [],
+      "truncated": null,
+      "reason": null
+    },
+    "quintuples": {
+      "status": "planned",
+      "tool_or_model": null,
+      "ranges_s": [],
+      "actual_timestamps_s": [],
+      "evidence_paths": [],
+      "exit_codes": [],
+      "truncated": null,
+      "reason": null
+    },
+    "temporal_actions": {
+      "status": "planned",
+      "tool_or_model": null,
+      "ranges_s": [],
+      "actual_timestamps_s": [],
+      "evidence_paths": [],
+      "exit_codes": [],
+      "truncated": null,
+      "reason": null
+    },
+    "discrepancy_review": {
+      "status": "planned",
+      "tool_or_model": null,
+      "ranges_s": [],
+      "actual_timestamps_s": [],
+      "evidence_paths": [],
+      "exit_codes": [],
+      "truncated": null,
+      "reason": null
+    },
+    "safety": {
+      "status": "planned",
+      "tool_or_model": null,
+      "ranges_s": [],
+      "actual_timestamps_s": [],
+      "evidence_paths": [],
+      "exit_codes": [],
+      "truncated": null,
+      "reason": null
+    },
+    "artifact_audit": {
+      "status": "planned",
+      "tool_or_model": null,
+      "ranges_s": [],
+      "actual_timestamps_s": [],
+      "evidence_paths": [],
+      "exit_codes": [],
+      "truncated": null,
+      "reason": null
+    },
+    "motion_source_rate": {
+      "status": "planned",
+      "tool_or_model": null,
+      "ranges_s": [],
+      "actual_timestamps_s": [],
+      "evidence_paths": [],
+      "exit_codes": [],
+      "truncated": null,
+      "reason": null
+    }
+  },
+  "asr_independence": {
+    "same_source_audio_sha256": null,
+    "independent_engines": null,
+    "raw_outputs_preserved": null,
+    "targeted_rerun_is_not_extra_witness": true
+  },
+  "events": [],
+  "claims": [],
+  "information_holes": [],
+  "limitations": [],
+  "result": {
+    "scope_status": null,
+    "host_pipeline_audit": "not_run",
+    "integrity_audit_status": null,
+    "required_gaps": [],
+    "personally_verified": null
+  },
+  "template_notice": "Unfilled template, not run evidence. Required channel unavailable -> partial/blocked, not N/A.",
+  "model_routing": {
+    "requested_model": null,
+    "effective_model": null,
+    "route_evidence": null,
+    "fallback_used": null,
+    "billing_verified": false
+  },
+  "review_identity": {
+    "reviewer_type": null,
+    "human_user_viewing_claimed": false,
+    "navigation_vs_original_coverage": null
+  },
+  "rejected_interpretations": [],
+  "control_inventory": {
+    "status": "planned|done|partial|not_applicable",
+    "regions": [],
+    "controls": [],
+    "state_changes": [],
+    "symmetric_diffs": [],
+    "unspoken": [],
+    "build_mapping": []
+  },
+  "motion_cues": {
+    "source": null,
+    "windows": []
+  },
+  "motion_tracks": [],
+  "windows": [],
+  "screenshots": {
+    "index": "screenshots/INDEX.md",
+    "count": 0
+  },
+  "vlm_calibration": null
+}
